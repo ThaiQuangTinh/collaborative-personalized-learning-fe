@@ -1,0 +1,578 @@
+.user-management-container {
+    padding: 10px;
+    /* background-color: #f5f5f5;
+    min-height: 100vh; */
+}
+
+.user-management-header {
+    margin-bottom: 24px;
+}
+
+.user-management-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 16px;
+}
+
+.user-management-stats {
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 24px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.stat-value.total {
+    color: #3b82f6;
+}
+
+.stat-value.admin {
+    color: #dc2626;
+}
+
+.stat-value.user {
+    color: #059669;
+}
+
+/* Filters Section */
+.user-management-container .user-filters-section {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-management-container .user-search-bar {
+    margin-bottom: 20px;
+}
+
+.user-management-container .search-input-container {
+    position: relative;
+}
+
+.user-management-container .search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+}
+
+.user-management-container .search-input {
+    width: 100%;
+    padding: 12px 48px 12px 48px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.user-management-container .search-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.user-management-container .clear-search-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 14px;
+}
+
+.user-management-container .clear-search-btn:hover {
+    color: #666;
+}
+
+/* Role Filter */
+.role-filter {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.filter-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #495057;
+    font-size: 14px;
+}
+
+.filter-label i {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+.role-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.role-btn {
+    padding: 8px 16px;
+    border: 1px solid #dee2e6;
+    background: white;
+    border-radius: 6px;
+    color: #495057;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.role-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.role-btn.active {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+}
+
+.role-btn.active:hover {
+    background-color: #2563eb;
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.loading-text {
+    margin-top: 20px;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Users Table */
+.users-table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th {
+    background-color: #f8f9fa;
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #e9ecef;
+    font-size: 14px;
+}
+
+.users-table td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #e9ecef;
+    color: #212529;
+    font-size: 14px;
+}
+
+.users-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* User Info Cells */
+.user-username .username-link {
+    color: #3b82f6;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.username-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.user-email .email-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.email-icon {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+/* Role Badge */
+.role-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Verification Badges */
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background-color: #d1fae5;
+    color: #059669;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.unverified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background-color: #fee2e2;
+    color: #dc2626;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.verified-badge i,
+.unverified-badge i {
+    font-size: 10px;
+}
+
+/* Action Buttons */
+.user-management-container .action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.btn-view {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.btn-view:hover {
+    background-color: #dbeafe;
+}
+
+.btn-delete {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+.btn-delete:hover {
+    background-color: #fee2e2;
+}
+
+/* No Data */
+.no-data {
+    text-align: center;
+    padding: 48px !important;
+    color: #666;
+    font-size: 16px;
+}
+
+/* User Detail Modal Styles */
+.user-detail-content {
+    max-width: 500px;
+}
+
+.user-detail-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.user-management-container .user-avatar-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.user-management-container .user-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.user-management-container .user-basic-info {
+    flex: 1;
+}
+
+.user-management-container .user-fullname {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.user-management-container .user-username {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.user-management-container .user-detail-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.meta-item i {
+    font-size: 12px;
+}
+
+.detail-role-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.user-detail-info {
+    margin-bottom: 24px;
+}
+
+.user-management-container .info-section {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-title i {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.info-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.user-management-container .info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.user-management-container .info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.info-value {
+    font-size: 14px;
+    color: #1f2937;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.info-value.verified {
+    color: #059669;
+    font-weight: 500;
+}
+
+.info-value.unverified {
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.email-value i {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.user-id {
+    font-family: monospace;
+    background-color: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.user-detail-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn-close-modal {
+    padding: 8px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-close-modal:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .user-management-container {
+        padding: 16px;
+    }
+
+    .user-management-title {
+        font-size: 24px;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .role-filter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .role-buttons {
+        width: 100%;
+    }
+
+    .role-btn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .user-detail-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-item {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+
+    .info-value {
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .users-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-management-container .user-avatar-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-management-container .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-action {
+        width: 28px;
+        height: 28px;
+    }
+}
