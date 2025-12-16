@@ -1,0 +1,93 @@
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fb;
+  flex-wrap: wrap;
+}
+
+/* --- Half left --- */
+.auth-left {
+  flex: 1;
+  background-color: #fff;
+  padding: 45px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Half right --- */
+.auth-right {
+  flex: 1;
+  position: relative;
+  background: var(--gradient-primary-135);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 40px 60px;
+  overflow: hidden;
+}
+
+.auth-right h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.slogan {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.features .check {
+  margin: 10px 0;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #16c60c;
+}
+
+.quote {
+  margin-left: 130px;
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/* --- Decorate with cricle --- */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.top-circle {
+  width: 300px;
+  height: 300px;
+  top: -70px;
+  left: -60px;
+} 
+
+.bottom-circle {
+  width: 240px;
+  height: 240px;
+  bottom: -80px;
+  right: -80px;
+}

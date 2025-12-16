@@ -1,0 +1,28 @@
+.button-icon {
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0 12px;
+    gap: 6px;
+    background-color: transparent;
+    color: #333;
+}
+
+.button-icon i {
+    transition: all 0.3s ease;
+}
+
+.button-icon:hover {
+    transform: scale(1.05);
+    color: var(--icon-button-hover-color) !important;
+}
+
+.button-icon-text {
+    font-size: 13px;
+    font-weight: 500;
+}

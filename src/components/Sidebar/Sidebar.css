@@ -1,0 +1,194 @@
+.sidebar-container {
+    position: relative;
+}
+
+.ps-sidebar-container {
+    overflow-y: hidden !important;
+    scrollbar-gutter: stable;
+    background: #fff;
+}
+
+.sidebar-container:hover .ps-sidebar-container {
+    overflow-y: auto !important;
+}
+
+/* Custom scrollbar */
+.ps-sidebar-container::-webkit-scrollbar {
+    width: 3px;
+}
+
+.ps-sidebar-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-container:hover .ps-sidebar-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 123, 255, 0.3);
+}
+
+/* Header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    position: relative;
+    min-height: 70px;
+    box-sizing: border-box;
+}
+
+.sidebar-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.sidebar-title {
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    margin: 0;
+    opacity: 1;
+    color: var(--sunset-start-color);
+    background: none;
+}
+
+.sidebar-content {
+    padding-bottom: 10px;
+}
+
+/* Tiêu đề nhóm menu */
+.sidebar-section {
+    font-size: 14px;
+    padding: 20px 20px 8px;
+    opacity: 0.7;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* Menu items */
+.ps-menu-button {
+    padding: 8px 20px !important;
+    color: #e0f2fe !important;
+    /* Màu chữ xanh nhạt */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    font-size: 14px;
+    margin: 2px 12px !important;
+    border-radius: 8px !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+.ps-menu-button:hover {
+    background: #cde6ff !important;
+    color: #ffffff !important;
+    transform: translateX(4px);
+}
+
+/* Active state */
+.menu-item.active .ps-menu-button {
+    background: #cde6ff !important;
+    color: #4361ee !important;
+    font-weight: 600;
+}
+
+.menu-item.active .ps-menu-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 3px;
+    background-color: #4361ee;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Icon căn chỉnh */
+.ps-menu-icon {
+    width: 20px !important;
+    text-align: center;
+    margin-right: 12px !important;
+    flex-shrink: 0;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    color: #514848;
+}
+
+.ps-menu-button:hover .ps-menu-icon {
+    transform: scale(1.1);
+    /* color: #cde6ff; */
+}
+
+.menu-item.active .ps-menu-icon {
+    color: #4361ee;
+}
+
+.ps-menu-label {
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Khi sidebar thu gọn */
+.ps-collapsed .sidebar-title,
+.ps-collapsed .sidebar-section,
+.ps-collapsed .ps-menu-label {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease;
+}
+
+.ps-collapsed .ps-menu-button {
+    margin: 4px 16px !important;
+    justify-content: center;
+}
+
+.ps-collapsed .ps-menu-icon {
+    margin-right: 0 !important;
+    transform: none;
+    font-size: 18px;
+}
+
+.ps-collapsed .ps-menu-button:hover .ps-menu-icon {
+    transform: scale(1.1);
+}
+
+/* Đảm bảo menu không bị cắt khi thu gọn */
+.ps-sidebar-root.ps-collapsed {
+    min-width: 80px !important;
+}
+
+/* Hiệu ứng cho logo khi collapsed */
+.ps-collapsed .sidebar-logo {
+    margin-right: 0;
+}
+
+.logout-modal-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}

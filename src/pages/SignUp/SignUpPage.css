@@ -1,0 +1,38 @@
+.signup-options {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forgot-link {
+    color: #6c63ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.register-text {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.register-text a {
+    color: #f05a28;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+.terms-text {
+    margin-top: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #757575;
+}

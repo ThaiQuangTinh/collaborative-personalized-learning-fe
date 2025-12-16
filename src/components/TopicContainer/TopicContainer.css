@@ -1,0 +1,186 @@
+.topic {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.topic:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topic-header {
+    padding: 15px;
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #252222;
+}
+
+.topic-header:hover {
+    background-color: #dbeafe;
+}
+
+.topic-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.drag-handle {
+    color: var(--gray);
+    cursor: move;
+}
+
+.title-edit-container {
+    flex: 1;
+}
+
+.topic-title-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    background: white;
+}
+
+.topic-title-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.topic-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px;
+    color: #252222;
+}
+
+.topic-actions i {
+    cursor: pointer;
+    color: var(--gray);
+    transition: all 0.3s ease;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.topic-actions i:hover {
+    color: var(--primary);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.delete-topic-btn:hover {
+    color: var(--danger) !important;
+    background-color: rgba(231, 76, 60, 0.1) !important;
+}
+
+.save-topic-btn, .cancel-topic-btn {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.save-topic-btn {
+    margin: 0 10px;
+}
+
+
+.topic-content {
+    padding: 20px;
+    background-color: #fff;
+    animation: slideDown 0.3s ease;
+}
+
+.topic-date-content .topic-time-title {
+    color: #252222;
+}
+
+.topic-date-content .topic-time {
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.topic-date-range {
+    margin-bottom: 20px;
+}
+
+.topic-description {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--primary);
+}
+
+.topic-notes {
+    margin-bottom: 25px;
+}
+
+.lessons-container {
+    margin-top: 25px;
+}
+
+.lessons-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #252222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lesson-wrapper {
+    margin-bottom: 10px;
+}
+
+.add-lesson-bottom-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.lesson-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .topic-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .topic-actions {
+        align-self: flex-end;
+    }
+
+    .topic-content {
+        padding: 15px;
+    }
+}

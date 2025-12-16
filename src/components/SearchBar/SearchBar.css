@@ -1,0 +1,122 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color, #fff);
+  border: 1px solid var(--border-color, #d0d7de);
+  border-radius: var(--border-radius, 8px);
+  padding: var(--padding, 8px 12px);
+  transition: all 0.25s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.searchbar:hover,
+.searchbar:focus-within {
+  border-color: var(--focus-border-color, #4361ee);
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.1);
+}
+
+/* Size variations */
+.searchbar.small {
+  height: 32px;
+  min-height: 32px;
+}
+
+.searchbar.medium {
+  height: 40px;
+  min-height: 40px;
+}
+
+.searchbar.large {
+  height: 48px;
+  min-height: 48px;
+}
+
+.search-icon {
+  color: var(--icon-color, #4361ee);
+  margin-right: 8px;
+  font-size: var(--icon-size, 16px);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-icon.small {
+  margin-right: 6px;
+}
+
+.search-icon.large {
+  margin-right: 10px;
+}
+
+.clear-icon {
+  color: #999;
+  margin-left: 8px;
+  font-size: var(--icon-size, 16px);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.clear-icon:hover {
+  color: #ff4444;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: var(--font-size, 14px);
+  color: var(--text-color, #333);
+  background: transparent;
+  height: 100%;
+  min-width: 0;
+}
+
+.search-input.small {
+  font-size: 12px;
+}
+
+.search-input.medium {
+  font-size: 14px;
+}
+
+.search-input.large {
+  font-size: 16px;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  font-size: calc(var(--font-size, 14px) - 1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .searchbar {
+    width: 100% !important;
+  }
+  
+  .searchbar.large {
+    height: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Focus state */
+.search-input:focus {
+  outline: none;
+}
+
+/* Disabled state */
+.searchbar.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.searchbar.disabled .search-input {
+  cursor: not-allowed;
+}
+
+.searchbar.disabled .search-icon,
+.searchbar.disabled .clear-icon {
+  cursor: not-allowed;
+}

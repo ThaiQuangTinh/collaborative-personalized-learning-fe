@@ -1,0 +1,88 @@
+@import './_variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+body {
+  background-color: #f5f7fa;
+  /* background-color: #fff; */
+}
+
+/* CSS for form */
+.auth-form {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-title {
+  font-size: 25px;
+  color: var(--form-title);
+  font-weight: 600;
+  margin: 20px 0 8px 0;
+}
+
+.form-sub-title {
+  color: var(--form-sub-title);
+  margin: 6px 0 30px 0;
+  font-size: 15px;
+}
+
+.form-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.form-link {
+  margin-left: 4px;
+  color: #4E26FF;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+/* CSS for line */
+
+.under-line {
+  text-decoration: underline !important;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.horizontal-line {
+  width: 100%;
+  margin-top: 15px;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Another css */
+.text-center {
+  text-align: center;
+}
+
+/* Global style */
+.react-tooltip {
+  font-size: 12px !important;      
+}

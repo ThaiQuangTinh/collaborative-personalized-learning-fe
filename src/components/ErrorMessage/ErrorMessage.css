@@ -1,0 +1,18 @@
+.err-message-wrapper {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: #ffece8;
+    border-radius: 5px;
+}
+
+.err-message-contaner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.err-message-contaner p {
+    color: #e7443c;
+    font-size: 15px;
+}

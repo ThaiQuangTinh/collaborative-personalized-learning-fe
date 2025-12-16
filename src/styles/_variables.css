@@ -1,0 +1,27 @@
+/* _variables.css */
+:root {
+    --primary-color: #FC4A1A;
+    --primary-color-v2: #3498db;
+    --sunset-start-color: #F7B733;
+    --sunset-end-color: #FC4A1A;
+
+    --error-color: #e63946;
+    --focus-color: #F7B733;
+    --icon-color: #6c757d;
+
+
+    --form-title: #000000a6;
+    --form-sub-title: #666;
+
+
+    --text-primary: #f26b1d;
+    --text-secondary: #555;
+
+
+    --link-blue: #6c63ff;
+    --link-orange: #f05a28;
+
+
+    --gradient-primary-90: linear-gradient(90deg, #F7B733 0%, #FC4A1A 100%);
+    --gradient-primary-135: linear-gradient(135deg, #F7B733 0%, #FC4A1A 100%);
+}

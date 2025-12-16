@@ -1,0 +1,24 @@
+.home-page-container {
+    background-color: #F5F7FA;
+    display: flex;
+}
+
+.main-home-page {
+    margin-left: 250px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+    background-color: #f5f7fa;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-home-page.collapsed {
+    margin-left: 80px;
+}
+
+.page-content {
+    padding: 20px;
+    flex: 1;
+    /* overflow-y: auto; */
+    background-color: #f5f7fa;
+}

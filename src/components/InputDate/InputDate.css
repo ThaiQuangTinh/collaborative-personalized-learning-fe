@@ -1,0 +1,30 @@
+.input-date {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-date-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.required {
+    color: red;
+    margin-left: 2px;
+}
+
+.input-date-field {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.input-date-field:hover,
+.input-date-field:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+    outline: none;
+}

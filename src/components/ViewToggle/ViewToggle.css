@@ -1,0 +1,37 @@
+.view-toggle {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    width: fit-content;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.view-toggle .toggle-btn {
+    width: 44px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #444;
+    transition: all 0.25s ease;
+}
+
+.view-toggle .toggle-btn:first-child {
+    border-right: 1px solid #e0e0e0;
+}
+
+.view-toggle .toggle-btn:hover {
+    background-color: #f3f6fa;
+    color: #4361ee;
+}
+
+.view-toggle .toggle-btn.active {
+    background-color: #4361ee;
+    color: #fff;
+}

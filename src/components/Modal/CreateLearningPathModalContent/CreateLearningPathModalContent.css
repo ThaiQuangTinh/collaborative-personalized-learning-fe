@@ -1,0 +1,21 @@
+.create-path-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    padding: 4px;
+}
+
+.create-path-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.create-path-form .modal-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}

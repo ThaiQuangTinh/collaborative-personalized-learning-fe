@@ -1,0 +1,35 @@
+.share-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.permission-options {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.share-link-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-link-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.share-per-options {
+    margin-left: 10px;
+}

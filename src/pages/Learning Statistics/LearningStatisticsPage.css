@@ -1,0 +1,147 @@
+/* LearningProgressPage.css */
+.progress-page {
+  /* padding: 24px; */
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  border-radius: 12px;
+}
+
+.progress-page .page-title {
+  color: #4361ee;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.progress-page .learning-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.progress-page .path-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.progress-page .path-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.progress-page .card-header {
+  margin-bottom: 20px;
+}
+
+.progress-page .path-title {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.progress-page .progress-section {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+
+.progress-page .circular-progress {
+  flex-shrink: 0;
+}
+
+.progress-page .progress-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-page .progress-text {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-page.percentage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progress-page .stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.progress-page .stat-item {
+  text-align: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.progress-page .stat-number {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4361ee;
+  margin-bottom: 4px;
+}
+
+.progress-page .stat-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.progress-page .time-info {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 16px;
+}
+
+.progress-page .time-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.progress-page .time-label {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .progress-page .learning-paths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-page .progress-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .progress-page .stats-grid {
+    width: 100%;
+  }
+}

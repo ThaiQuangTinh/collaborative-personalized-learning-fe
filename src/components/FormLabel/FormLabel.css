@@ -1,0 +1,25 @@
+.form-label-wrapper {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    /* margin-bottom: 6px; */
+    user-select: none;
+}
+
+.form-label-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color, #4361ee);
+}
+
+.form-label-text {
+    display: flex;
+    align-items: center;
+}
+
+.form-label-required {
+    color: var(--error-color, #e63946);
+    margin-left: 4px;
+    font-weight: 600;
+}

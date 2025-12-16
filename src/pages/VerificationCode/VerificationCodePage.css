@@ -1,0 +1,95 @@
+.verify-email-page {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verify-email-container {
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    text-align: center;
+}
+
+.verify-email-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.ve-info {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.ve-email {
+    font-weight: bold;
+}
+
+.ve-instruction {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.verify-email-form {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.code-input-group {
+    display: flex;
+    gap: 20px;
+}
+
+#btnSendCode {
+    width: 140px;
+    height: 39px;
+    padding: 0 !important;
+    margin: 8px 0 !important;
+    background-color: #fffcf3;
+    border: 2px solid #f39c12 !important;
+}
+
+.verify-email-form #btnContinue {
+    margin-top: 5px;
+}
+
+.ve-resend, .ve-switch {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* .resend-text {
+    margin-right: 4px;
+} */
+
+.countdown-text {
+    color: #777;
+    font-size: 14px;
+}
+
+.countdown-text span {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.ve-resend a.form-link[disabled] {
+    pointer-events: none;
+    opacity: 0.6;
+}

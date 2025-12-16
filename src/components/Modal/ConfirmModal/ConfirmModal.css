@@ -1,0 +1,17 @@
+.confirm-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.confirm-modal-message {
+    font-size: 15px;
+    color: #333;
+}
+
+.confirm-modal-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

@@ -1,0 +1,86 @@
+.learning-path-container {
+    padding: 0 10px;
+}
+
+.learning-path-container .filter-tab-container {
+    margin-top: 30px;
+}
+
+.lpc-header {
+    margin: 3px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lpc-header-title {
+    color: #4361ee;
+}
+
+.lpc-header .btn {
+    margin: 0 0 0 20px;
+}
+
+.list-path-functions {
+    margin: 28px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.list-path-functions .searchbar {
+    flex: 1;
+}
+
+.list-card {
+    display: grid;
+    gap: 25px;
+}
+
+.list-card.grid-mode {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.list-card.list-mode {
+    grid-template-columns: none;
+}
+
+.selected-items-actions {
+    padding: 0 20px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #ecedf3;
+    border-radius: 10px;
+}
+
+.selected-items-actions .slected-count {
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.empty-path-list {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty-path-list i {
+    font-size: 60px;
+    opacity: 0.4;
+}
+
+.empty-path-list h3 {
+    margin-top: 15px;
+}
+
+.empty-path-list p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.contain-loading-pathlist {
+    margin-top: 180px;
+}
