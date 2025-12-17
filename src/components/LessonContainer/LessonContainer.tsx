@@ -80,6 +80,9 @@ const LessonContainer: React.FC<LessonContainerProps> = ({
                 newStatus = LearningStatus.COMPLETED;
                 break;
             case LearningStatus.COMPLETED:
+                newStatus = LearningStatus.OVERDUE;
+                break;
+            case LearningStatus.OVERDUE:
                 newStatus = LearningStatus.NOT_STARTED;
                 break;
             default:
@@ -100,6 +103,9 @@ const LessonContainer: React.FC<LessonContainerProps> = ({
         try {
             // Create lesson
             if (lesson.isLocal) {
+                console.log("Start date: " + editRangeDate.startDate);
+                console.log("End date: " + editRangeDate.endDate);
+
                 const res = await lessonService.createLesson({
                     topicId: topicId, title: editTitle,
                     startTime: toTimestamp(editRangeDate.startDate),
@@ -191,6 +197,13 @@ const LessonContainer: React.FC<LessonContainerProps> = ({
 
         fetchNotesByLessonId(lesson.id);
     }, [lesson]);
+
+    useEffect(() => {
+        setEditRangeDate({
+            startDate: lesson.startTime ?? '',
+            endDate: lesson.endTime ?? ''
+        });
+    }, [lesson.id]);
 
     return (
         <div className={`lesson ${!lesson.isUnlocked ? 'lesson-disabled' : ''}`}>

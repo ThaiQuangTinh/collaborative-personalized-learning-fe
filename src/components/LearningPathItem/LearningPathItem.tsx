@@ -60,6 +60,10 @@ const LearningPathItem: React.FC<LearningPathItemProps> = ({
     [LearningStatus.COMPLETED]: {
       class: 'status-completed',
       text: 'Đã hoàn thành'
+    },
+    [LearningStatus.OVERDUE]: {
+      class: 'status-overdue',
+      text: 'Quá hạn'
     }
   };
 

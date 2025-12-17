@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./DateRangePicker.css";
 import InputDate from "../InputDate/InputDate";
 import FormLabel from "../FormLabel/FormLabel";
+import { formatDate } from "../../utils/dateUtils";
 
 interface DateRangePickerProps {
     label?: string;
@@ -19,9 +20,8 @@ interface DateRangePickerProps {
 
 const normalizeDate = (value: string) => {
     if (!value) return "";
-    const d = new Date(value);
-    if (isNaN(d.getTime())) return "";
-    return d.toISOString().split("T")[0];
+
+    return value.split("T")[0].split(" ")[0];
 };
 
 const DateRangePicker: React.FC<DateRangePickerProps> = ({
@@ -69,13 +69,9 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
             {!editable ? (
                 <p className="date-range-display">
                     <span>Thời gian: </span>
-                    {range.startDate
-                        ? new Date(range.startDate).toLocaleDateString("vi-VN")
-                        : "__ / __ / ____"}
+                    {range.startDate ? formatDate(range.startDate) : "__ / __ / ____"}
                     {" - "}
-                    {range.endDate
-                        ? new Date(range.endDate).toLocaleDateString("vi-VN")
-                        : "__ / __ / ____"}
+                    {range.endDate ? formatDate(range.endDate) : "__ / __ / ____"}
                 </p>
             ) : (
                 <div className="date-range-edit">

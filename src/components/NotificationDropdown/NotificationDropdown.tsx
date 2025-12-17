@@ -4,6 +4,7 @@ import { NotificationResponse } from '../../types/notification';
 import './NotificationDropdown.css';
 import { useNotification } from '../../contexts/NotificationContext';
 import { useNavigate } from 'react-router-dom';
+import { NotificationSourceType } from '../../constants/notificationSourceType';
 
 interface NotificationDropdownProps {
     open: boolean;
@@ -23,6 +24,8 @@ const NotificationDropdown: React.FC<NotificationDropdownProps> = ({
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     const navigate = useNavigate();
+
+    const { toLearningPathDetails } = useRouteNavigation();
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -71,8 +74,14 @@ const NotificationDropdown: React.FC<NotificationDropdownProps> = ({
                                 className={`ndp-item ${!n.isRead ? 'unread' : ''}`}
                                 onClick={() => {
                                     markAsRead(n.notificationId);
-                                    onClose();
-                                    navigate(`/learning-feed?id=${n.sourceId}`);
+                                    if (n.sourceType === NotificationSourceType.POST) {
+                                        navigate(`/learning-feed?id=${n.sourceId}`);
+                                        onClose();
+                                    } else if (n.sourceType === NotificationSourceType.LESSON) {
+                                        const pathId = JSON.parse(n.metadata).pathId;
+                                        toLearningPathDetails(pathId);
+                                        onClose();
+                                    }
                                 }}
                             >
                                 <div className="ndp-icon">

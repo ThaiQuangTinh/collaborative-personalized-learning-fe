@@ -5,6 +5,8 @@ import { NotificationType } from '../../constants/notificationType';
 import { useNotification } from '../../contexts/NotificationContext';
 import './NotificationPage.css';
 import ConfirmModal from '../../components/Modal/ConfirmModal/ConfirmModal';
+import useRouteNavigation from '../../hooks/useNavigation';
+import { NotificationSourceType } from '../../constants/notificationSourceType';
 
 
 const NotificationPage: React.FC = () => {
@@ -16,6 +18,8 @@ const NotificationPage: React.FC = () => {
     const [showDeleteNotificationModal, setShowDeleteNotificationModal] = useState(false);
 
     const navigate = useNavigate();
+
+    const { toLearningPathDetails } = useRouteNavigation();
 
     const mapNotificationTypeToUI = (type: NotificationType) => {
         switch (type) {
@@ -124,8 +128,13 @@ const NotificationPage: React.FC = () => {
                                 key={notification.notificationId}
                                 className={`notification-item ${notification.isRead ? 'read' : 'unread'}`}
                                 onDoubleClick={() => {
-                                    markAsRead(notification.notificationId)
-                                    navigate(`/learning-feed?id=${notification.sourceId}`);
+                                    markAsRead(notification.notificationId);
+                                    if (notification.sourceType === NotificationSourceType.POST) {
+                                        navigate(`/learning-feed?id=${notification.sourceId}`);
+                                    } else if (notification.sourceType === NotificationSourceType.LESSON) {
+                                        const pathId = JSON.parse(notification.metadata).pathId;
+                                        toLearningPathDetails(pathId);
+                                    }
                                 }}
                             >
                                 <div

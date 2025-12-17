@@ -31,6 +31,7 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
         const res = await userService.getAllNotifications();
         if (res.success && res.data) {
+            // console.log(res.data);
             const sorted = [...res.data].sort(
                 (a, b) => new Date(b.sentAt).getTime() - new Date(a.sentAt).getTime()
             );

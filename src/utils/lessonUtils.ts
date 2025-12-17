@@ -10,6 +10,8 @@ export const getStatusText = (lesson: Lesson) => {
             return 'Đang học';
         case LearningStatus.COMPLETED:
             return 'Hoàn thành';
+        case LearningStatus.OVERDUE:
+            return 'Quá hạn';
         default:
             return 'Chưa bắt đầu';
     }
@@ -23,6 +25,8 @@ export const getStatusClass = (lesson: Lesson) => {
             return 'in-progress';
         case LearningStatus.COMPLETED:
             return 'completed';
+        case LearningStatus.OVERDUE:
+            return 'overdue';
         default:
             return 'not-started';
     }
@@ -36,6 +40,8 @@ export const getStatusBadgeClass = (lesson: Lesson) => {
             return 'status-in-progress';
         case LearningStatus.COMPLETED:
             return 'status-completed';
+        case LearningStatus.OVERDUE:
+            return 'status-overdue';
         default:
             return 'status-not-started';
     }

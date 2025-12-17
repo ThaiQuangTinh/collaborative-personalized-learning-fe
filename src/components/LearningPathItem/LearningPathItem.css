@@ -85,6 +85,12 @@
     color: #16a085;
 }
 
+.status-overdue {
+    background-color: #fdecea;
+    color: #e63946;
+}
+
+
 .path-meta {
     display: flex;
     justify-content: space-between;

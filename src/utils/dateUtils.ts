@@ -1,16 +1,17 @@
 // ---- Format: YYYY-MM-DD ----
-export const formatDate = (dateInput: string | Date | null): string => {
+export const formatDate = (dateInput: string | null): string => {
     if (!dateInput) return "";
 
-    const date = new Date(dateInput);
-    if (isNaN(date.getTime())) return "";
+    // Chỉ lấy phần ngày, bỏ toàn bộ time & timezone
+    const datePart = dateInput.split("T")[0]; // YYYY-MM-DD
 
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
+    const [year, month, day] = datePart.split("-");
+
+    if (!year || !month || !day) return "";
 
     return `${day}/${month}/${year}`;
 };
+
 
 // ---- Format: HH:mm:ss ----
 export const formatTime = (dateInput: string | Date | null): string => {
@@ -27,38 +28,42 @@ export const formatTime = (dateInput: string | Date | null): string => {
 };
 
 // ---- Combine: DD/MM/YYYY - HH:mm:ss ----
-export const formatDateTime = (dateInput: string | Date | null): string => {
-    const d = formatDate(dateInput);
-    const t = formatTime(dateInput);
-    return d && t ? `${d} - ${t}` : "";
+export const formatDateTime = (dateInput: string | null): string => {
+    if (!dateInput) return "";
+
+    // YYYY-MM-DDTHH:mm:ss(.SSS)
+    const [datePart, timePart] = dateInput.split("T");
+
+    if (!datePart || !timePart) return "";
+
+    const [year, month, day] = datePart.split("-");
+    const [hour, minute] = timePart.split(":");
+
+    if (!year || !month || !day || !hour || !minute) return "";
+
+    return `${day}/${month}/${year} - ${hour}:${minute}`;
 };
+
 
 /**
  * Convert "YYYY-MM-DD" -> "YYYY-MM-DDTHH:MM:SS.mmmZ"
  * Giữ nguyên ngày truyền vào, nhưng dùng giờ hiện tại lúc gọi hàm.
  */
 export const toTimestamp = (dateStr: string): string => {
-    // Nếu dateStr rỗng → dùng current datetime
     if (!dateStr) {
+        // dùng thời điểm hiện tại nhưng giữ local
         return new Date().toISOString();
     }
 
     const [year, month, day] = dateStr.split("-").map(Number);
 
-    const now = new Date();
+    // set 12:00 trưa local để tránh lệch ngày
+    const safeDate = new Date(year, month - 1, day, 12, 0, 0, 0);
 
-    const result = new Date(
-        year,
-        month - 1,
-        day,
-        now.getHours(),
-        now.getMinutes(),
-        now.getSeconds(),
-        now.getMilliseconds()
-    );
-
-    return result.toISOString();
+    // ⚠️ KHÔNG dùng giờ hiện tại
+    return safeDate.toISOString();
 };
+
 
 
 // const dateUtils = {

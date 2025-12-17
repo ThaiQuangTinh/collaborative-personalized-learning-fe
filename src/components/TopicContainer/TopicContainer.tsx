@@ -169,6 +169,7 @@ const TopicContainer: React.FC<TopicContainerProps> = ({
         const fetchLessonByTopicId = async (topicId: string) => {
             const response = await topicService.getAllLessonsByTopicId(topicId);
             if (response != null && response.data) {
+                console.log(response.data);
                 setLessons(mapLessonResponsesToLessons(response.data));
             }
         };
