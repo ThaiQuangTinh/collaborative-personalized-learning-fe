@@ -1,12 +1,12 @@
 .learning-feed {
-    background-color: #ffffff;
+    background-color: #f5f7fa;
     min-height: 100vh;
     border-radius: 10px;
 }
 
 .feed-container {
     margin: 0 auto;
-    padding: 0 40px 10px 40px;
+    padding: 0 20px 10px 20px;
 }
 
 /* Header */
